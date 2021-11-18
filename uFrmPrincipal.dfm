@@ -1,0 +1,130 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 464
+  Top = 249
+  BorderStyle = bsNone
+  Caption = 'Calculadora de troco'
+  ClientHeight = 418
+  ClientWidth = 665
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlFundo: TPanel
+    Left = 0
+    Top = 65
+    Width = 665
+    Height = 353
+    Align = alClient
+    AutoSize = True
+    TabOrder = 0
+    ExplicitHeight = 372
+    object lblTroco: TLabel
+      Left = 40
+      Top = 35
+      Width = 103
+      Height = 35
+      Caption = 'Troco:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -29
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object edtTroco: TEdit
+      Left = 168
+      Top = 22
+      Width = 473
+      Height = 67
+      AutoSize = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -48
+      Font.Name = 'Verdana'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnKeyPress = edtTrocoKeyPress
+    end
+    object mmoCedulas: TMemo
+      Left = 40
+      Top = 115
+      Width = 601
+      Height = 183
+      Color = clSkyBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Verdana'
+      Font.Style = []
+      Lines.Strings = (
+        'mmoCedulas')
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 1
+    end
+    object pnlBotoes: TPanel
+      Left = 1
+      Top = 304
+      Width = 663
+      Height = 48
+      Align = alBottom
+      TabOrder = 2
+      ExplicitTop = 323
+      object btnFechar: TSpeedButton
+        Left = 16
+        Top = 9
+        Width = 73
+        Height = 32
+        Caption = 'Fechar'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Verdana'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnFecharClick
+      end
+      object btnExecutar: TSpeedButton
+        Left = 575
+        Top = 9
+        Width = 73
+        Height = 32
+        Caption = 'Executar'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Verdana'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnExecutarClick
+      end
+    end
+  end
+  object pnlTitulo: TPanel
+    Left = 0
+    Top = 0
+    Width = 665
+    Height = 65
+    Align = alTop
+    Caption = 'Calculadora de c'#233'dulas de troco'
+    Color = clBackground
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -29
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+  end
+end
