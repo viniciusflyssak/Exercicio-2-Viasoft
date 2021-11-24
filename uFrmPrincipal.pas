@@ -43,41 +43,20 @@ var
   begin
     for i := 0 to CedulasTroco.Count - 1 do
     begin
-      if TTroco(CedulasTroco[i]).Tipo =  ceNota100 then
-        mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 100 reais')
-      else
-        if TTroco(CedulasTroco[i]).Tipo =  ceNota50 then
-          mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 50 reais')
-        else
-          if TTroco(CedulasTroco[i]).Tipo =  ceNota20 then
-            mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 20 reais')
-          else
-            if TTroco(CedulasTroco[i]).Tipo =  ceNota10 then
-              mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 10 reais')
-            else
-              if TTroco(CedulasTroco[i]).Tipo =  ceNota5 then
-                mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 5 reais')
-              else
-                if TTroco(CedulasTroco[i]).Tipo =  ceNota2 then
-                  mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 2 reais')
-                else
-                  if TTroco(CedulasTroco[i]).Tipo =  ceMoeda100 then
-                    mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 1 real')
-                  else
-                    if TTroco(CedulasTroco[i]).Tipo =  ceMoeda50 then
-                      mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 50 centavos')
-                    else
-                      if TTroco(CedulasTroco[i]).Tipo =  ceMoeda25 then
-                        mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 25 centavos')
-                      else
-                        if TTroco(CedulasTroco[i]).Tipo =  ceMoeda10 then
-                          mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 10 centavos')
-                        else
-                          if TTroco(CedulasTroco[i]).Tipo =  ceMoeda5 then
-                            mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 5 centavos')
-                          else
-                            if TTroco(CedulasTroco[i]).Tipo =  ceMoeda1 then
-                              mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 1 centavo');
+      case TTroco(CedulasTroco[i]).Tipo of
+        ceNota100: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 100 reais');
+        ceNota50: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 50 reais');
+        ceNota20: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 20 reais');
+        ceNota10: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 10 reais');
+        ceNota5: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 5 reais');
+        ceNota2: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' nota(s) de 2 reais');
+        ceMoeda100: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 1 real');
+        ceMoeda50: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 50 centavos');
+        ceMoeda25: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 25 centavos');
+        ceMoeda10: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 10 centavos');
+        ceMoeda5: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 5 centavos');
+        ceMoeda1: mmoCedulas.Lines.Add(IntToStr(TTroco(CedulasTroco[i]).Quantidade) + ' moeda(s) de 1 centavo');
+      end;
     end;
   end;
 
