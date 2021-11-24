@@ -47,7 +47,7 @@ begin
   i := 0;
   Result:= TList.Create;
   trocoInteger := Round(Troco * 100);
-  while ((trocoInteger > 0) and not (i = 12)) do
+  while (trocoInteger > 0) do
   begin
     if ((trocoInteger div arrayValorNota[i]) > 0) then
     begin
