@@ -12,7 +12,7 @@ type
     FTipo: TCedula;
     FQuantidade: Integer;
   public
-    constructor Create(Tipo: TCedula; Quantidade: Integer); reintroduce;
+    constructor Create(ValorCedula: Integer; Quantidade: Integer); reintroduce;
     function GetTipo: TCedula;
     function GetQuantidade: Integer;
     procedure SetQuantidade(Quantidade: Integer);
@@ -27,10 +27,23 @@ const
 
 implementation
 
-constructor TTroco.Create(Tipo: TCedula; Quantidade: Integer);
+constructor TTroco.Create(ValorCedula: Integer; Quantidade: Integer);
 begin
   inherited Create;
-  FTipo := Tipo;
+  case ValorCedula of
+    10000: FTipo := ceNota100;
+    5000: FTipo := ceNota50;
+    2000: FTipo := ceNota20;
+    1000: FTipo := ceNota10;
+    500: FTipo := ceNota5;
+    200: FTipo := ceNota2;
+    100: FTipo := ceMoeda100;
+    50: FTipo := ceMoeda50;
+    25: FTipo := ceMoeda25;
+    10: FTipo := ceMoeda10;
+    5: FTipo := ceMoeda5;
+    1: FTipo := ceMoeda1;
+  end;
   FQuantidade := Quantidade;
 end;
 
